@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT. Idemu Sistem Sinergi | IT Solutions</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#3b82f6', // blue-500
+                            DEFAULT: '#2563eb', // blue-600
+                            dark: '#1e3a8a', // blue-900
+                            slate: '#0f172a', // slate-900
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom CSS for Geometry Pattern Overlay */
+        .bg-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-sans text-gray-600 bg-slate-50 antialiased">
+
+    <nav class="fixed w-full z-50 top-0 bg-blue-800 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <img src="https://www.idemusistemsinergi.com/assets/images/white-logo.svg">
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-200 hover:text-brand-DEFAULT font-medium transition">Home</a>
+                    <a href="#about" class="text-gray-200 hover:text-brand-DEFAULT font-medium transition">About</a>
+                    <a href="#services" class="text-gray-200 hover:text-brand-DEFAULT font-medium transition">Services</a>
+                    <a href="#divisions" class="text-gray-200 hover:text-brand-DEFAULT font-medium transition">Divisions</a>
+                </div>
+
+                <div class="hidden md:flex">
+                    <a href="#contact" class="bg-brand-slate hover:bg-brand-DEFAULT text-white px-6 py-2.5 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg">
+                        Contact Us
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-200 hover:text-brand-slate focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-3 flex flex-col">
+                <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">About</a>
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Services</a>
+                <a href="#divisions" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Divisions</a>
+                <a href="#contact" class="block px-3 py-3 mt-4 text-center text-base font-medium text-white bg-brand-slate rounded-lg">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-20 pb-32 lg:pt-32 lg:pb-48 overflow-hidden min-h-screen flex items-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" alt="IT Background" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-slate via-brand-slate/90 to-brand-DEFAULT/80 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-pattern opacity-30"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="max-w-3xl">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-900/50 border border-blue-400/30 text-blue-200 text-sm font-semibold tracking-wider mb-6 backdrop-blur-sm">
+                    PREMIER IT SOLUTION PARTNER
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Empowering Your Business Through <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Synergy & Technology</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+                    Kami adalah mitra IT terpercaya yang siap mentransformasi visi bisnis Anda menjadi solusi digital inovatif, efisien, dan berdampak nyata.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#services" class="bg-brand-DEFAULT hover:bg-blue-500 text-white px-8 py-3.5 rounded-lg font-semibold transition-all shadow-lg hover:shadow-brand-DEFAULT/30 text-center">
+                        Explore Our Services
+                    </a>
+                    <a href="#contact" class="bg-transparent hover:bg-white hover:text-brand-slate text-white border-2 border-white px-8 py-3.5 rounded-lg font-semibold transition-all text-center">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Team Synergy" class="w-full h-auto object-cover aspect-video lg:aspect-square">
+                    <div class="absolute inset-0 bg-brand-slate/10"></div>
+                </div>
+
+                <div>
+                    <h2 class="text-brand-DEFAULT font-bold tracking-wide uppercase text-sm mb-2">About Us</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-brand-slate mb-6">Membangun Sinergi Digital yang Berkelanjutan</h3>
+                    
+                    <div class="flex space-x-2 md:space-x-4 border-b border-gray-200 mb-8 overflow-x-auto pb-2">
+                        <button class="tab-btn active text-brand-DEFAULT border-b-2 border-brand-DEFAULT pb-2 px-2 font-semibold whitespace-nowrap transition-colors" data-target="who-we-are">
+                            Who We Are
+                        </button>
+                        <button class="tab-btn text-gray-500 hover:text-brand-DEFAULT pb-2 px-2 font-medium whitespace-nowrap transition-colors" data-target="our-vision">
+                            Our Vision
+                        </button>
+                        <button class="tab-btn text-gray-500 hover:text-brand-DEFAULT pb-2 px-2 font-medium whitespace-nowrap transition-colors" data-target="our-history">
+                            Our History
+                        </button>
+                    </div>
+
+                    <div class="min-h-[200px]">
+                        <div id="who-we-are" class="tab-content block animate-fade-in">
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                PT. Idemu Sistem Sinergi adalah perusahaan teknologi informasi yang berdedikasi tinggi untuk memberikan solusi digital komprehensif bagi bisnis dari berbagai skala. Kami percaya bahwa teknologi terbaik lahir dari sinergi antara ide brilian dan eksekusi teknis yang presisi.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Tim kami terdiri dari para ahli industri yang passionate—mulai dari software engineer, UI/UX designer, hingga strategis digital—yang bekerja secara harmonis untuk memecahkan masalah kompleks bisnis Anda.
+                            </p>
+                        </div>
+                        
+                        <div id="our-vision" class="tab-content hidden animate-fade-in">
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                <strong>Visi:</strong> Menjadi katalis utama dalam transformasi digital di Asia Tenggara, menciptakan ekosistem teknologi yang inklusif, aman, dan memberdayakan setiap entitas bisnis.
+                            </p>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-DEFAULT mt-1 mr-3"></i> Inovasi tiada henti dalam pengembangan solusi IT.</li>
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-DEFAULT mt-1 mr-3"></i> Membangun kemitraan jangka panjang berbasis kepercayaan.</li>
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-DEFAULT mt-1 mr-3"></i> Menghasilkan produk berkualitas global dengan sentuhan lokal.</li>
+                            </ul>
+                        </div>
+
+                        <div id="our-history" class="tab-content hidden animate-fade-in">
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Berawal dari sebuah tim kecil konsultan IT pada tahun 2018, kami menyadari bahwa banyak perusahaan kesulitan mengintegrasikan teknologi ke dalam operasional sehari-hari mereka.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Melalui dedikasi dan portofolio yang terus berkembang, PT. Idemu Sistem Sinergi resmi berdiri dengan misi yang lebih besar. Hingga kini, kami telah membantu ratusan klien dari sektor perbankan, retail, hingga startup dalam mendigitalisasi proses bisnis mereka secara sukses.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-DEFAULT font-bold tracking-wide uppercase text-sm mb-2">Our Expertise</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-slate mb-6">Layanan IT Komprehensif untuk Skalabilitas Bisnis</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Dalam era digital yang dinamis, Anda membutuhkan lebih dari sekadar vendor; Anda butuh partner strategis. Layanan kami dirancang secara spesifik untuk meningkatkan efisiensi operasional, memperkuat brand identity, dan mendorong pertumbuhan revenue bisnis Anda.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-DEFAULT rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-slate mb-3">Digital Marketing</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Strategi pemasaran berbasis data untuk meningkatkan brand awareness, konversi, dan ROI melalui berbagai channel digital secara efektif.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-DEFAULT rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-slate mb-3">Mobile App Development</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Pengembangan aplikasi mobile native & cross-platform (iOS & Android) yang responsif, cepat, dan sesuai dengan tren teknologi terkini.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-DEFAULT rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-slate mb-3">Website Design & Development</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Pembuatan corporate website hingga sistem web kompleks (SaaS/ERP) yang aman, scalable, dan memiliki performa tinggi.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-DEFAULT rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-slate mb-3">Mobile App & Web UI/UX Design</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Rancangan antarmuka visual yang memukau dipadukan dengan pengalaman pengguna (User Experience) yang intuitif dan berpusat pada pengguna.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-DEFAULT rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-file-pen"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-slate mb-3">Article Writing & SEO Expert</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Produksi konten berkualitas tinggi yang dioptimasi untuk mesin pencari guna memastikan bisnis Anda mudah ditemukan di halaman pertama Google.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-DEFAULT rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-slate mb-3">IT Consulting & Support</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Konsultasi ahli mengenai arsitektur IT, audit keamanan sistem, serta dukungan pemeliharaan 24/7 untuk memastikan operasional tanpa henti.</p>
+                </div>
+
+            </div>
+
+            <div class="text-center">
+                <a href="#contact" class="inline-flex items-center justify-center bg-brand-slate hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                    Discuss Your Project With Us <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="divisions" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-brand-DEFAULT font-bold tracking-wide uppercase text-sm mb-2">Our Divisions</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-slate mb-4">Orang-Orang Hebat di Balik Layar</h3>
+                <p class="text-gray-600">Sinergi kami terbentuk dari 3 pilar divisi utama yang dikelola oleh para profesional dengan rekam jejak teruji di bidangnya masing-masing.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="group relative bg-slate-50 rounded-2xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" alt="Programmer Division" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-brand-slate mb-2">Programmer</h4>
+                        <p class="text-gray-600 text-sm mb-4">Fokus pada <span class="font-semibold text-brand-DEFAULT">logic, coding, dan arsitektur sistem.</span></p>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            Divisi ini adalah otak dari setiap sistem. Menggunakan teknologi mutakhir (React, Node.js, Python, dll) untuk membangun sistem yang aman, scalable, dan memiliki logika komputasi terbaik.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group relative bg-slate-50 rounded-2xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000&auto=format&fit=crop" alt="Web Design Division" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-brand-slate mb-2">Web Design</h4>
+                        <p class="text-gray-600 text-sm mb-4">Fokus pada <span class="font-semibold text-brand-DEFAULT">estetika, layout, dan interaksi.</span></p>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            Divisi ini memastikan produk tidak hanya berfungsi, tapi juga indah dan intuitif. Mengutamakan perjalanan pengguna (user journey) yang mulus dari klik pertama hingga konversi.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group relative bg-slate-50 rounded-2xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" alt="Digital Marketing Division" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-brand-slate mb-2">Digital Marketing</h4>
+                        <p class="text-gray-600 text-sm mb-4">Fokus pada <span class="font-semibold text-brand-DEFAULT">strategi, growth, dan analitik.</span></p>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            Ujung tombak yang menghubungkan produk ke pasar yang tepat. Menganalisis data pasar, menjalankan kampanye iklan presisi, dan memastikan pertumbuhan bisnis Anda terakselerasi.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-brand-slate text-slate-300 pt-20 pb-10 border-t-4 border-brand-DEFAULT">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 rounded bg-brand-DEFAULT flex items-center justify-center text-white font-bold text-xl">
+                            I
+                        </div>
+                        <span class="font-bold text-xl text-white tracking-tight">Idemu Sistem Sinergi</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Menghadirkan solusi teknologi terintegrasi untuk mendigitalisasi dan menskalakan bisnis Anda menuju masa depan yang efisien.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-white transition-colors"><i class="fa-solid fa-chevron-right text-xs text-brand-DEFAULT mr-2"></i> Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors"><i class="fa-solid fa-chevron-right text-xs text-brand-DEFAULT mr-2"></i> About Us</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors"><i class="fa-solid fa-chevron-right text-xs text-brand-DEFAULT mr-2"></i> Services</a></li>
+                        <li><a href="#divisions" class="hover:text-white transition-colors"><i class="fa-solid fa-chevron-right text-xs text-brand-DEFAULT mr-2"></i> Divisions</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors"><i class="fa-solid fa-chevron-right text-xs text-brand-DEFAULT mr-2"></i> Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 text-brand-DEFAULT"></i>
+                            <span class="text-sm">Gedung Sinergi Tower, Lt. 15<br>Jl. Jend. Sudirman No. Kav 21<br>Jakarta Selatan, 12920</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mr-3 text-brand-DEFAULT"></i>
+                            <span class="text-sm">hello@idemusistem.co.id</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mr-3 text-brand-DEFAULT"></i>
+                            <span class="text-sm">+62 811 2345 6789</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">Follow Us</h4>
+                    <p class="text-sm mb-4">Tetap terhubung untuk update teknologi dan insight bisnis terbaru.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-DEFAULT flex items-center justify-center text-white transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-DEFAULT flex items-center justify-center text-white transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-DEFAULT flex items-center justify-center text-white transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-DEFAULT flex items-center justify-center text-white transition-all">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-slate-500 mb-4 md:mb-0">
+                    &copy; 2026 PT. Idemu Sistem Sinergi. All rights reserved.
+                </p>
+                <div class="text-sm text-slate-500 space-x-4">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // 2. Tab Functionality (About Us Section)
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active state from all buttons
+                    tabBtns.forEach(b => {
+                        b.classList.remove('text-brand-DEFAULT', 'border-b-2', 'border-brand-DEFAULT');
+                        b.classList.add('text-gray-500');
+                    });
+                    
+                    // Add active state to clicked button
+                    btn.classList.remove('text-gray-500');
+                    btn.classList.add('text-brand-DEFAULT', 'border-b-2', 'border-brand-DEFAULT');
+
+                    // Hide all contents
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                        content.classList.remove('block');
+                    });
+
+                    // Show target content
+                    const targetId = btn.getAttribute('data-target');
+                    const targetContent = document.getElementById(targetId);
+                    if (targetContent) {
+                        targetContent.classList.remove('hidden');
+                        targetContent.classList.add('block');
+                    }
+                });
+            });
+
+            // 3. Navbar Sticky Effect (Optional Enhancement)
+            const navbar = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    navbar.classList.add('shadow-md');
+                    navbar.classList.remove('shadow-sm');
+                } else {
+                    navbar.classList.add('shadow-sm');
+                    navbar.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
